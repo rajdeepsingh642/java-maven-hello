@@ -20,6 +20,7 @@ pipeline{
                     sh 'mvn clean package'
                 }
                 }
+         }
         stage('sonar quality check'){
             steps{
                 withSonarQubeEnv(credentialsId: 'sonar_qube') {
@@ -33,4 +34,3 @@ pipeline{
         }
 
     }
-}
